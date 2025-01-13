@@ -16,8 +16,8 @@ jobs:
             - name: Connect to production server and run batch script
               uses: appleboy/ssh-action@master
               with:
-                    host: ${{ secrets.BRADON_SERVER_IP }}
-                    username: ${{ secrets.BRADON_SERVER_USERNAME }}
+                    host: ${{ secrets.DEV_SERVER_IP }}
+                    username: ${{ secrets.DEV_USERNAME }}
                     key: ${{ secrets.SSH_PRIVATE_KEY }}
                     script: |
                         cd C:\Users\blbarfuss\Desktop\batchfile.bat
