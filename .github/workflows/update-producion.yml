@@ -7,17 +7,10 @@ on:
 
 jobs:
     deploy:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
 
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
-
-            - name: Connect to production server and run batch script
-              uses: appleboy/ssh-action@master
-              with:
-                    host: ${{ secrets.DEV_SERVER_IP }}
-                    username: ${{ secrets.DEV_USERNAME }}
-                    key: ${{ secrets.SSH_PRIVATE_KEY }}
-                    script: |
-                        cd C:\Users\blbarfuss\Desktop\batchfile.bat
+            - name: echo stuff
+              run: echo "Hi there"
